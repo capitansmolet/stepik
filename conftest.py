@@ -19,6 +19,7 @@ def browser(request):
         browser = webdriver.Chrome(options=options)
     else:
         browser = webdriver.Chrome()
+    browser.implicitly_wait(5)    
     yield browser
     print("\nquit browser..")
     browser.quit()
